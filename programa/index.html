@@ -22,7 +22,7 @@
     let mensaje = "-";
     if(horaMateria >= subjectDate && horaMateria <= horaTermino &&  diaMateria === subjectDay){
         console.log('entra')
-        mensaje = enlace;
+        mensaje = `<a href=${enlace} target="_blank">Ve al sitio </a>`;
     }
     
     return document.getElementById(idTabla).innerHTML = mensaje;
@@ -71,7 +71,7 @@
                 <td>Reparacion de Equipos de Computo</td>
                 <td>Juan Daniel Chavez Ramirez</td>
                 <td>MIE 9:00:00 PM - 10:30:00 PM</td>
-                <td id="reparacionEquipos"></td>
+                <td id="reparacionEquipos" ></td>
             </tr>
             <script>compareDate('11:55:00', 0, 'reparacionEquipos', 'https://www.youtube.com/watch?v=qjbs1dW_gaE&ab_channel=UrbanTecno', '22:30:00')</script>
             <tr>
