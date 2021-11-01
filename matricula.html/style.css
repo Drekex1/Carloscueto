@@ -1,0 +1,39 @@
+#hedi {
+    display:flex;
+    justify-content: space-between;
+    background: rgb(248, 250, 248);
+    padding: 0px 20px 0px 20px;
+
+}
+#menu {
+    display:flex;
+    justify-content: flex-end;
+}
+#menu div{
+    padding: 0px 20px 0px 20px;
+    display:flex;
+    align-items: center;
+    font-size: 18px;
+}
+#neim {
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+}
+main {
+    padding:25px;
+    background: #f3eae8;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+img {
+    padding: 20px;
+}
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+#fich {
+    font-size: 23px;
+}

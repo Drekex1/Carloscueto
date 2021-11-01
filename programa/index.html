@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UFT-8" />
+    <meta name="viweport" content="width=divice-scale, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Programa</title>
+</head>
+<script>
+    function compareDate(subjectDate, subjectDay, idTabla, enlace, horaTermino){
+    // subjectDate es la hora de la materia en especifico
+    // subjectDay es el dia de la materia en especifico.
+    // horaMateria es la hora en que se visita la pagina
+    // diaMateria es el dia en que se visita la pagina
+
+    const fechaGlobal = new Date()
+
+    //Se obtienen datos al momento de visitar pagina
+    const horaMateria = fechaGlobal.toLocaleTimeString();
+    const diaMateria = fechaGlobal.getDay()
+
+    let mensaje = "-";
+    if(horaMateria >= subjectDate && horaMateria <= horaTermino &&  diaMateria === subjectDay){
+        console.log('entra')
+        mensaje = enlace;
+    }
+    
+    return document.getElementById(idTabla).innerHTML = mensaje;
+}
+</script>
+<body>
+    <header id="hedi">
+        <div id="neim">
+            <p>Instituto Carlos Cueto Fernandini</p>
+        </div>
+        <div id="menu">
+        <div id="datos">
+            <a href="../datos/index.html">Mis Datos</a>
+        </div>
+        <div id="matri">
+            <a href="../matricula.html/index.html">Matricula</a>
+        </div>
+        <div id="programa">
+            <a href="index.html">Programa</a>
+        </div>
+        <div id="exit">
+            <a href="../user.html/index.html">Salir</a>
+        </div>
+        </div>
+    </header>
+    <main>
+        <h1>Horario de Clases-Enlaces</h1>
+        <table>
+            <tr>
+                <th>Programa</th>
+                <th>Curso</th>
+                <th>Docente</th>
+                <th>Horario de Clases</th>
+                <th>Enlace</th>
+            </tr>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Administracion de redes</td>
+                <td>Juan Daniel Chavez Ramirez</td>
+                <td>LUN 6:00:00 PM - 8:30:00PM</td>
+                <td id="adminRedes"></td>
+            </tr>
+            <script>compareDate('11:54:00', 0, 'adminRedes', 'enlance','13:00:00')</script>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Reparacion de Equipos de Computo</td>
+                <td>Juan Daniel Chavez Ramirez</td>
+                <td>MIE 9:00:00 PM - 10:30:00 PM</td>
+                <td id="reparacionEquipos"></td>
+            </tr>
+            <script>compareDate('11:55:00', 0, 'reparacionEquipos', 'https://www.youtube.com/watch?v=qjbs1dW_gaE&ab_channel=UrbanTecno', '22:30:00')</script>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Istalacion y configuracion de redes</td>
+                <td>Dany De Los Angeles Sevillano Chacara</td>
+                <td>MIE 6:00:00 PM - 9:00:00 PM</td>
+                <td id="instalacIon"></td>
+            </tr>
+            <script>compareDate('18:00:00', 3, 'instalacIon', 'enlance instalacion', '21:00:00')</script>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Herramientos de Gestion de Redes</td>
+                <td>Dany De Los Angeles Sevillano Chacara</td>
+                <td>VIE 7:00:00 PM - 9:00:00 PM</td>
+                <td id="herrmIentasRedeS"></td>
+            </tr>
+            <script>compareDate('19:00:00', 5, 'herrmIentasRedeS', 'enlance redes', '21:00:00')</script>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Software de Servidores</td>
+                <td>Dany De Los Angeles Sevillano Chacara</td>
+                <td>VIE 9:00:00 PM - 10:30:00 PM</td>
+                <td id="softWareserVi"></td>
+            </tr>
+            <script>compareDate('21:00:00', 5, 'softWareserVi', 'enlance servidores', '22:30:00')</script>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Ofitmatica</td>
+                <td>Adolfo Rondan Chacon</td>
+                <td>JUE 7:30:00 PM - 10:30:00 PM</td>
+                <td id="ofimAtica"></td>
+            </tr>
+            <script>compareDate('19:30:00', 4, 'ofimAtica', 'enlance ifimatica', '22:30:00')</script>
+            <tr>
+                <td>Computación e Informática</td>
+                <td>Didactica en el uso de recursos de la Informática</td>
+                <td>Beltrán Fuentes Rivera Ramírez</td>
+                <td>MAR 6:45:00 PM - 7:30:00 PM</td>
+                <td id="recUrsos"></td>
+            </tr>
+            <script>compareDate('18:45:00', 2, 'recUrsos', 'enlance recursos', '19:30:00')</script>
+            <tr>
+                <td>Computación e Informática-Transversales</td>
+                <td>Estadística</td>
+                <td>Beltrán Fuentes Rivera Ramírez</td>
+                <td>MAR 9:00:00 PM - 10:30:00 PM</td>
+                <td id="estaDistica"></td>
+            </tr>
+            <script>compareDate('21:00:00', 2, 'estaDistica', 'enlance estadistica', '21:45:00')</script>
+            <tr>
+                <td>Computación e Informática-Transversales</td>
+                <td>Cultura Artística</td>
+                <td>Carlos Vera Velasquez</td>
+                <td>JUE 6:00:00 PM - 7:30:00 PM</td>
+                <td id="culturAristica"></td>
+            </tr>
+            <script>compareDate('18:00:00', 4, 'culturAristica', 'enlance cultura', '19:30:00')</script>
+            <tr>
+                <td>Computación e Informática-Transversales</td>
+                <td>Fundamentos de Investigación</td>
+                <td>Javier Arsenio Pajuelo Vilchez</td>
+                <td>LUN 6:00:00 PM - 8:30:00 PM</td>
+                <td id="fundaMentos"></td>
+            </tr>
+            <script>compareDate('18:00:00', 1, 'fundaMentos', 'enlance fundamentos', '20:30:00')</script>
+            <tr>
+                <td>Computación e Informática-Transversales</td>
+                <td>Interpretación de Textos</td>
+                <td>Ángel velazco Quispe</td>
+                <td>MAR 7:30:00 PM - 9:00:00 PM</td>
+                <td id="preTextos"></td>
+            </tr>
+            <script>compareDate('19:30:00', 2, 'preTextos', 'enlance textos', '21:00:00')</script>
+        </table>
+    </main>
+</body>
+</html>

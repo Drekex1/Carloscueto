@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+    background-image: url(./img/Carlos\ Cueto.jpg);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#diva {
+    padding:25px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
